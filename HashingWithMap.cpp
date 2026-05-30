@@ -14,7 +14,7 @@ int main() {
     };
 
     //precompute
-    map <int, int> mpp; //initializing map
+    unordered_map <int, int> mpp; //initializing map
     for(int i=0; i<n; i++) {
         mpp[arr[i]]++; //This creates key-value pair inside the map. if the value doesnot exist if creates and marks +1, if value exists it increases by 1.
     }
@@ -23,7 +23,7 @@ int main() {
     for(auto it : mpp) {
         cout << it.first << "-> " << it.second << endl;
     }
-
+ 
     //initialize queries length and take queries values from the user.
     int q;
     cin >> q;
