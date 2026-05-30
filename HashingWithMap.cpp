@@ -19,6 +19,11 @@ int main() {
         mpp[arr[i]]++; //This creates key-value pair inside the map. if the value doesnot exist if creates and marks +1, if value exists it increases by 1.
     }
 
+    //iterate in the map
+    for(auto it : mpp) {
+        cout << it.first << "-> " << it.second << endl;
+    }
+
     //initialize queries length and take queries values from the user.
     int q;
     cin >> q;
