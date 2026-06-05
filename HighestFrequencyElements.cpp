@@ -21,13 +21,13 @@ int main() {
 
     //iterate in the map
     for(auto it : mpp) {      
-        int max_freq = 0;
-        if(it.second > max_freq) {
+        int low_freq = 0;
+        if(low_freq < it.second) {
             int ans=arr[0];  
-            max_freq = it.second;
+            low_freq = it.second;
             ans = it.first;
-             cout << "Most frequent element: " << ans << endl;
-        cout << "Frequency: " << max_freq << endl;
+             cout << "Least frequent element: " << ans << endl;
+            cout << "Frequency: " << low_freq << endl;
         }
         
 
