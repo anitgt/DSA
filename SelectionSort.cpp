@@ -1,8 +1,8 @@
-#include <iostream>
+#include<bits/stdc++.h>
 using namespace std;
 
 void selection_sort(int arr[], int n) {
-    for(int i=0; i<n-2; i++) {
+    for(int i=0; i<=n-2; i++) {
         int mini = i;
         //seaching for smallest element
         for(int j=i; j<=n-1; j++) {
@@ -26,7 +26,7 @@ int main() {
    int n;
    cout << "Enter N";
    cin >> n;
-   int array[n] = {};
+   int array[n];
    
    for(int i=0; i<n; i++) {
     cout << "Enter values of array: " << endl;
