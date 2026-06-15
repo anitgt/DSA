@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/*  Brute force Method 
+
 void insertion_sort(int arr[], int n) {
     for(int i=0; i<= n-1;i++) {
         int j=i;
@@ -36,5 +38,33 @@ int main() {
             break;
         }
     }
+    cout << sLargest;
+}
+*/
+
+//Better Way:-
+
+int main() {
+     int n;
+    cout << "Enter N: ";
+    cin >> n;
+
+    int arr[n];
+
+    for(int i=0; i<n; i++) {
+        cin >> arr[i];
+    }
+
+    int largest =  arr[0];
+    int sLargest = -1;
+    for(int i=0; i<n; i++) {
+        if(arr[i] > largest) {
+            largest = arr[i];
+        }
+        if(arr[i] != largest && arr[i] > sLargest) {
+            sLargest = arr[i];
+        }
+    }
+
     cout << sLargest;
 }
