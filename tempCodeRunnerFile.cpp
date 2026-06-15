@@ -1,3 +1,3 @@
-if(didSwap = 0) {
-            break;
-        }
+ else if(arr[i] > sLargest) {
+        //     sLargest = arr[i];
+        // }
