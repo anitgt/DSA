@@ -1,3 +1,4 @@
+/*
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -38,4 +39,33 @@ int main() {
     }
 
     return 0;
+}
+*/
+
+//optimal approach
+
+//since array is sorted (2 pointer way)
+
+#include<bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Enter value of n:";
+    cin >> n;
+    
+    int arr[n];
+
+    for(int i=0; i<n;i++) {
+        cin >> arr[i];
+    }
+
+    int i=0;
+    for(int j=1; j<n; j++) {
+        if(arr[j] != arr[i]) {
+            arr[i+1] = arr[j];
+        }
+        cout << i+1;
+    }
+
 }
