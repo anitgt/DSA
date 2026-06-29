@@ -64,6 +64,7 @@ int main() {
     for(int j=1; j<n; j++) {
         if(arr[j] != arr[i]) {
             arr[i+1] = arr[j];
+            i++;
         }
         cout << i+1;
     }
