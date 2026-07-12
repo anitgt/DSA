@@ -24,14 +24,14 @@ int main() {
 
     int arr[n];
     
-    for(int i=0; i<n-1; i++) {
+    for(int i=0; i<n; i++) {
         cin >> arr[i];
     };
 
     cout << Number_Appeared_once(arr, n);
     return 0;
 }
-*/
+
 
 //Better solution using hashing
 #include<bits/stdc++.h>
@@ -63,12 +63,38 @@ int main() {
 
     int arr[n];
     
-    for(int i=0; i<n-1; i++) {
+    for(int i=0; i<n; i++) {
         cin >> arr[i];
     };
 
     cout << Number_Appeared_once(arr, n);
     return 0;
+}
+
+*/
+//Using XOR
+#include<bits/stdc++.h>
+using namespace std;
+
+int Number_Appeared_once(int arr[], int n) {
+   int XOR =0;
+   for(int i= 0; i<n; i++) {
+    XOR = XOR ^ arr[i];
+   };
+   return XOR;
+}
+
+int main() {
+      int n;
+    cin >> n;
+
+    int arr[n];
+    
+    for(int i=0; i<n; i++) {
+        cin >> arr[i];
+    };
+
+    cout << Number_Appeared_once(arr, n);
 
     return 0;
 }
