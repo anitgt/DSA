@@ -110,12 +110,14 @@ using namespace std;
 int missing_Num(int arr[], int n) {
     int XOR1 =0;
     int XOR2 =0;
-    for(int i=1; i<=n; i++) {
-        XOR1= XOR1 ^ i;
-    };
+    // for(int i=1; i<=n; i++) {
+    //     XOR1= XOR1 ^ i;
+    // };
     for(int i=0; i<n-1; i++) {
         XOR2 = XOR2 ^  arr[i];
+        XOR1 = XOR1 ^ (i+1); //After cutting loop
     };
+    XOR1 = XOR1 ^ n; //after the loop
 
     return XOR1 ^ XOR2;
 }
